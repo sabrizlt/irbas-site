@@ -11,6 +11,13 @@
 
   requestAnimationFrame(() => document.body.classList.add("is-loaded"));
 
+  // L'email si compone solo al click: niente indirizzo in chiaro per i bot
+  document.querySelectorAll("[data-mail]").forEach((a) => a.addEventListener("click", (e) => {
+    e.preventDefault();
+    const [u, d] = a.dataset.mail.split("|");
+    location.href = `mailto:${u}@${d}?subject=${encodeURIComponent("Demo di Irbas")}`;
+  }));
+
   /* ---------- Stato dello scroll ---------- */
   let y = scrollY, sy = scrollY, vel = 0, svel = 0;
 
