@@ -68,6 +68,9 @@
     const ctx = canvas.getContext("2d");
     const m = model(options.detail || "full");
     const getPhase = options.phase || (() => "idle");
+    const getSpread = options.spread || (() => 0);
+    const getBoost = options.boost || (() => 0);
+    let yawAcc = 0, lastT = 0;
     let w = 0, h = 0, dpr = 1, visible = true, raf = 0;
     const start = performance.now();
 
@@ -99,7 +102,9 @@
       if (listening) scale += 0.025 * Math.sin(t * 3.2);
       const radius = Math.min(w, h) * 0.34 * scale;
       const spin = thinking ? 0.42 : listening ? 0.16 : 0.09;
-      const yaw = t * spin, pitch = 0.38 + 0.06 * Math.sin(t * 0.21);
+      yawAcc += (t - lastT) * (spin + getBoost()); lastT = t;
+      const spread = getSpread();
+      const yaw = yawAcc, pitch = 0.38 + 0.06 * Math.sin(t * 0.21);
       const cyaw = Math.cos(yaw), syaw = Math.sin(yaw), cp = Math.cos(pitch), sp = Math.sin(pitch);
 
       // Alone
@@ -121,7 +126,8 @@
         const y2 = p.y * cp - z1 * sp;
         const z2 = p.y * sp + z1 * cp;
         const f = 1 / (1 - 0.18 * z2);
-        const qx = cx + x1 * radius * f, qy = cy - y2 * radius * f;
+        const k = 1 + spread * (0.25 + (p.seed / 6.283) * 1.6);
+        const qx = cx + x1 * radius * f * k, qy = cy - y2 * radius * f * k;
         const depth = (z2 + 1) / 2;
         let light = p.bright * (0.3 + 0.7 * depth) * energy;
         if (thinking) light *= 0.55 + 0.6 * Math.max(0, Math.sin(t * 4.2 - p.y * 7 + p.seed * 0.3));

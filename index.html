@@ -34,6 +34,7 @@
         <a href="#voce">Voce</a>
         <a href="#squadra">Squadra</a>
         <a href="#app">L'app</a>
+        <a href="#microapp">Micro app</a>
         <a href="#cervello">Cervello</a>
         <a href="#aziende">Aziende</a>
       </nav>
@@ -49,17 +50,17 @@
         <canvas id="orb"></canvas>
       </div>
       <div class="wrap hero__content">
-        <p class="kicker reveal">Assistente personale per Mac</p>
-        <h1 class="hero__title">
+        <p class="kicker">Assistente personale per Mac</p>
+        <h1 class="hero__title" data-hero-title>
           <span class="line"><span class="word">Il tuo Mac,</span></span>
           <span class="line"><span class="word grad">finalmente vivo.</span></span>
         </h1>
-        <p class="hero__lead reveal">Irbas ascolta, capisce e agisce sulle tue app. Lavora con una squadra di agenti e ricorda tutto in un cervello che resta sul tuo computer.</p>
-        <div class="hero__actions reveal">
+        <p class="hero__lead">Irbas ascolta, capisce e agisce sulle tue app. Lavora con una squadra di agenti e ricorda tutto in un cervello che resta sul tuo computer.</p>
+        <div class="hero__actions">
           <a href="#contatti" class="btn btn--primary">Richiedi una demo</a>
           <a href="#voce" class="btn btn--glass">Scopri come funziona</a>
         </div>
-        <p class="hero__hint reveal">Premi <kbd>⌥</kbd> <kbd>Spazio</kbd> e parla.</p>
+        <p class="hero__hint">Premi <kbd>⌥</kbd> <kbd>Spazio</kbd> e parla.</p>
       </div>
       <div class="scroll-cue" aria-hidden="true"><span></span></div>
     </section>
@@ -77,13 +78,49 @@
       <p class="manifesto__text" data-words>Non è un'altra chat. Irbas vive sul tuo Mac, conosce le tue app, i tuoi progetti e le tue persone. Gli dici cosa ti serve e lui lo fa: scrive, cerca, organizza, programma, e ti chiede l'ok prima di ogni cosa importante.</p>
     </section>
 
+    <!-- LA HOME VERA: entra in 3D, poi la luce gira tra le sue parti -->
+    <section class="realhome" id="app" data-scene>
+      <div class="realhome__sticky">
+        <div class="wrap realhome__head">
+          <p class="kicker">01 · L'app</p>
+          <h2 data-split>Questa è Irbas. <span class="grad">Quella vera.</span></h2>
+        </div>
+        <div class="realhome__stage">
+          <div class="mac" data-mac>
+            <div class="mac__bar"><i></i><i></i><i></i></div>
+            <div class="mac__screen" data-mac-screen>
+              <img src="assets/img/home.jpg" alt="La home di Irbas: la sidebar, la sfera, lo stato del Mac, il cervello e la chat" width="2400" height="1561">
+              <div class="spot" data-spot></div>
+            </div>
+          </div>
+          <div class="callouts">
+            <div class="callout" data-callout data-x="6.8" data-y="44" data-z="1.55">
+              <span class="callout__n">01</span><h3>Dodici micro app</h3><p>Progetti, Ufficio, Chat, Fogli, Prisma, Cervello, Salute, Promemoria, Calendario, Email, Comandi. Tutte in una barra.</p>
+            </div>
+            <div class="callout" data-callout data-x="46.8" data-y="40" data-z="1.7">
+              <span class="callout__n">02</span><h3>La sfera</h3><p>Migliaia di particelle di luce. Azzurra quando ascolta, viola quando pensa. Dici «Irbas» o premi ⌥ Spazio.</p>
+            </div>
+            <div class="callout" data-callout data-x="90" data-y="17" data-z="1.9">
+              <span class="callout__n">03</span><h3>Il Mac, adesso</h3><p>CPU, memoria e batteria sempre sotto controllo. Il Tecnico ti avvisa prima che qualcosa rallenti.</p>
+            </div>
+            <div class="callout" data-callout data-x="90" data-y="40" data-z="1.9">
+              <span class="callout__n">04</span><h3>Il cervello cresce</h3><p>Note, collegamenti, persone: Irbas impara dopo ogni conversazione e ti mostra cosa ha appena imparato.</p>
+            </div>
+            <div class="callout" data-callout data-x="90" data-y="76" data-z="1.9">
+              <span class="callout__n">05</span><h3>Scrivi o parla</h3><p>«Aggiungi un appuntamento il 15 dicembre alle 12.» Fatto, nel tuo Calendario.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- VOCE: scena fissa con frasi che scorrono -->
     <section class="voice" id="voce" data-scene>
       <div class="voice__sticky">
         <div class="wrap voice__grid">
           <div class="voice__copy">
-            <p class="kicker">01 · Voce</p>
-            <h2>Parli. Lui agisce.</h2>
+            <p class="kicker">02 · Voce</p>
+            <h2 data-split>Parli. Lui agisce.</h2>
             <p class="muted">Una pillola luminosa compare sopra tutto quello che stai facendo. Dici cosa ti serve, Irbas capisce, usa le app giuste e ti risponde a voce, con una voce naturale che gira tutta sul tuo Mac.</p>
             <ul class="steps" data-steps>
               <li class="is-on"><span>1</span>Lo chiami con <kbd>⌥</kbd> <kbd>Spazio</kbd></li>
@@ -124,8 +161,8 @@
     <section class="team" id="squadra" data-scene>
       <div class="team__sticky">
         <div class="wrap team__head">
-          <p class="kicker">02 · Squadra</p>
-          <h2>Una squadra di agenti.<br><span class="grad">Ognuno col suo mestiere.</span></h2>
+          <p class="kicker">03 · Squadra</p>
+          <h2 data-split>Una squadra di agenti.<br><span class="grad">Ognuno col suo mestiere.</span></h2>
           <p class="muted">Si chiamano con @nome, si passano il lavoro tra loro e si fermano quando serve il tuo ok. Come un piccolo ufficio, sempre aperto.</p>
         </div>
         <div class="team__track" data-track>
@@ -165,90 +202,84 @@
       </div>
     </section>
 
-    <!-- L'APP: finestra che cambia sezione con lo scroll -->
-    <section class="showcase" id="app" data-scene>
-      <div class="showcase__sticky">
-        <div class="wrap showcase__head">
-          <p class="kicker">03 · L'app</p>
-          <h2>Tutto il tuo lavoro, <span class="grad">in un'unica finestra.</span></h2>
-        </div>
-        <div class="wrap">
-          <div class="window" data-window>
-            <div class="window__bar"><i></i><i></i><i></i><span>Irbas</span></div>
-            <div class="window__body">
-              <aside class="rail">
-                <div class="rail__item is-on" data-tab="0"><b>Irbas</b><small>Parla con Irbas</small></div>
-                <div class="rail__item" data-tab="1"><b>Ufficio</b><small>La squadra di agenti</small></div>
-                <div class="rail__item" data-tab="2"><b>Chat</b><small>Agenti, gruppi e chiamate</small></div>
-                <div class="rail__item" data-tab="3"><b>Cervello</b><small>Ricordi e collegamenti</small></div>
-                <div class="rail__item" data-tab="4"><b>Prisma</b><small>Il browser con l'AI</small></div>
-                <div class="rail__item"><b>Progetti</b><small>Lavoro, studio, cartelle</small></div>
-                <div class="rail__item"><b>Fogli</b><small>Excel, con l'AI</small></div>
-                <div class="rail__item"><b>Calendario</b><small>Impegni e giornate</small></div>
-                <div class="rail__item"><b>Email</b><small>Posta in arrivo</small></div>
-              </aside>
-              <div class="screens">
-                <!-- Home -->
-                <div class="screen is-on" data-screen="0">
-                  <div class="home">
-                    <canvas class="mini-orb" data-mini-orb></canvas>
-                    <p class="home__hello">Buongiorno, Sabri.</p>
-                    <div class="home__cards">
-                      <div class="card"><small>Oggi</small><b>2 impegni</b><span>Riunione alle 10:00</span></div>
-                      <div class="card"><small>Da approvare</small><b>1 richiesta</b><span>Deploy del sito</span></div>
-                      <div class="card"><small>Squadra</small><b>3 al lavoro</b><span>Dev, Segretario, Tecnico</span></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Ufficio -->
-                <div class="screen" data-screen="1">
-                  <div class="office">
-                    <div class="desk" style="--c:#4FC3FF"><span class="desk__av">D</span><b>Dev</b><small>Controlla i log di Railway</small><i class="desk__bar"></i></div>
-                    <div class="desk" style="--c:#B69CFF"><span class="desk__av">S</span><b>Segretario</b><small>Riassume 22 email</small><i class="desk__bar"></i></div>
-                    <div class="desk" style="--c:#8BE9FF"><span class="desk__av">R</span><b>Ricercatore</b><small>Confronta 5 fonti</small><i class="desk__bar"></i></div>
-                    <div class="desk is-idle" style="--c:#4FE0D0"><span class="desk__av">C</span><b>Creativo</b><small>In pausa</small></div>
-                    <div class="board">
-                      <small>Bacheca</small>
-                      <p><b>09:40 · Dev</b> Sito pubblicato, tutto verificato.</p>
-                      <p><b>09:12 · Segretario</b> Bozza pronta per il cliente.</p>
-                      <p class="approve">APPROVA · Pubblicare il deploy? <span>Ok</span></p>
-                    </div>
-                  </div>
-                </div>
-                <!-- Chat -->
-                <div class="screen" data-screen="2">
-                  <div class="chat">
-                    <div class="msg msg--in"><b>Direttore</b>Piano di oggi: prima il cliente, poi il sito nuovo.</div>
-                    <div class="msg msg--out">Ok, parti dal cliente.</div>
-                    <div class="msg msg--in"><b>Dev</b>Fatto: test passati e anteprima su localhost.</div>
-                    <div class="msg msg--in msg--ask"><b>Dev</b>Serve il tuo ok per pubblicare. <span class="chip">Approva</span><span class="chip chip--ghost">Rifiuta</span></div>
-                  </div>
-                </div>
-                <!-- Cervello -->
-                <div class="screen" data-screen="3">
-                  <canvas class="graph" data-mini-graph></canvas>
-                  <div class="note-chip">Io.md · 42 collegamenti</div>
-                </div>
-                <!-- Prisma -->
-                <div class="screen" data-screen="4">
-                  <div class="prisma">
-                    <div class="prisma__bar"><span class="prisma__logo">PRISMA</span><span class="prisma__url">technoparts.it</span></div>
-                    <div class="prisma__page">
-                      <div class="sk sk--title"></div><div class="sk"></div><div class="sk sk--short"></div>
-                      <div class="sk-grid"><i></i><i></i><i></i></div>
-                    </div>
-                    <div class="prisma__ai"><b>Irbas</b> Il sito risponde bene. Ho trovato 2 immagini senza testo alternativo: le sistemo?</div>
-                  </div>
-                </div>
+    <!-- LE MICRO APP: la sidebar vera scorre, una voce alla volta -->
+    <section class="apps-scene" id="microapp" data-scene>
+      <div class="apps-scene__sticky">
+        <div class="wrap apps-scene__grid">
+          <div class="side" data-side>
+            <div class="side__viewport">
+              <div class="side__pan" data-side-pan>
+                <img src="assets/img/sidebar.png" alt="La barra laterale di Irbas" width="458" height="2100">
+                <div class="side__hl" data-side-hl></div>
               </div>
             </div>
           </div>
-          <div class="screen-captions">
-            <p class="is-on">La home: la sfera di Irbas, la tua giornata, le cose da approvare.</p>
-            <p>L'Ufficio: vedi chi sta lavorando, la bacheca e cosa aspetta il tuo ok.</p>
-            <p>Le chat: parli con un agente o con tutta la squadra, come su WhatsApp.</p>
-            <p>Il Cervello: le tue note collegate, in un grafo che cresce con te.</p>
-            <p>Prisma: il browser con l'AI dentro, che legge le pagine con te.</p>
+          <div class="apps-scene__right">
+            <p class="kicker">04 · Le micro app <span class="counter"><b data-app-n>01</b> / 12</span></p>
+            <div class="apps-titles">
+              <div class="app-t is-on"><h2>Irbas</h2><p>Parli con lui, a voce o per iscritto. È il centro di tutto.</p></div>
+              <div class="app-t"><h2>Progetti</h2><p>Lavoro e studio divisi per spazio, con cartelle, contatti, appunti e avanzamento.</p></div>
+              <div class="app-t"><h2>Ufficio</h2><p>La squadra di agenti al lavoro: chi fa cosa, la bacheca e le cose da approvare.</p></div>
+              <div class="app-t"><h2>Chat</h2><p>Parli con un agente o con un gruppo. Anche chiamate, come su WhatsApp.</p></div>
+              <div class="app-t"><h2>Fogli</h2><p>Excel con l'AI: formule scritte e spiegate, numeri letti per te.</p></div>
+              <div class="app-t"><h2>Prisma</h2><p>Il browser con l'AI dentro: legge le pagine con te e agisce.</p></div>
+              <div class="app-t"><h2>Cervello</h2><p>I ricordi di Irbas, in note collegate. Un grafo che cresce ogni giorno.</p></div>
+              <div class="app-t"><h2>Salute</h2><p>Visite, analisi e dati dell'iPhone, ordinati in un solo posto.</p></div>
+              <div class="app-t"><h2>Promemoria</h2><p>Le cose da fare, create a voce e ricordate al momento giusto.</p></div>
+              <div class="app-t"><h2>Calendario</h2><p>Impegni e giornate. «Cosa ho domani?» e te lo dice.</p></div>
+              <div class="app-t"><h2>Email</h2><p>La posta riassunta, le bozze pronte. Invia solo quando dici tu.</p></div>
+              <div class="app-t"><h2>Comandi</h2><p>Le tue scorciatoie: «Buongiorno», «Fine giornata», «Riordina Download».</p></div>
+            </div>
+            <div class="preview" data-preview>
+              <div class="pv is-on"><canvas class="mini-orb" data-mini-orb></canvas><p class="pv__hello">Ciao. Sono qui.</p></div>
+              <div class="pv"><div class="list">
+                <div class="row"><i style="--c:#4FC3FF"></i><b>Appointment-geb</b><span>Lavoro · in corso</span><em style="--w:80%"></em></div>
+                <div class="row"><i style="--c:#8A7DFF"></i><b>Sito Irbas</b><span>Personale · in corso</span><em style="--w:55%"></em></div>
+                <div class="row"><i style="--c:#7CF2C2"></i><b>Next School</b><span>Cliente · restyling</span><em style="--w:35%"></em></div>
+              </div></div>
+              <div class="pv"><div class="office">
+                <div class="desk" style="--c:#4FC3FF"><span class="desk__av">D</span><b>Dev</b><small>Controlla i log</small><i class="desk__bar"></i></div>
+                <div class="desk" style="--c:#B69CFF"><span class="desk__av">S</span><b>Segretario</b><small>Riassume 22 email</small><i class="desk__bar"></i></div>
+                <div class="board"><small>Bacheca</small><p class="approve">APPROVA · Pubblicare il deploy? <span>Ok</span></p></div>
+              </div></div>
+              <div class="pv"><div class="chat">
+                <div class="msg msg--in"><b>Direttore</b>Piano di oggi: prima il cliente.</div>
+                <div class="msg msg--out">Ok, parti dal cliente.</div>
+                <div class="msg msg--in msg--ask"><b>Dev</b>Test passati. Pubblico? <span class="chip">Approva</span></div>
+              </div></div>
+              <div class="pv"><div class="sheet">
+                <div class="sheet__f"><b>fx</b> =SOMMA.SE(B:B;"Pagato";C:C)</div>
+                <div class="sheet__g"><span></span><span>A</span><span>B</span><span>C</span><span>1</span><span>Cliente</span><span>Stato</span><span>Importo</span><span>2</span><span>Rossi</span><span>Pagato</span><span>1.200</span><span>3</span><span>Bianchi</span><span>Attesa</span><span>860</span><span>4</span><span>Verdi</span><span>Pagato</span><span>2.450</span></div>
+                <div class="sheet__ai"><b>Irbas</b> Incassato: 3.650 €. Manca Bianchi.</div>
+              </div></div>
+              <div class="pv"><div class="prisma">
+                <div class="prisma__bar"><span class="prisma__logo">PRISMA</span><span class="prisma__url">technoparts.it</span></div>
+                <div class="prisma__page"><div class="sk sk--title"></div><div class="sk"></div><div class="sk sk--short"></div></div>
+                <div class="prisma__ai"><b>Irbas</b> La pagina risponde in 0,3 s. Tutto ok.</div>
+              </div></div>
+              <div class="pv"><canvas class="graph" data-mini-graph></canvas></div>
+              <div class="pv"><div class="list">
+                <div class="row"><i style="--c:#FF8FA3"></i><b>Visita dal dentista</b><span>12 novembre · 16:00</span></div>
+                <div class="row"><i style="--c:#7CF2C2"></i><b>Analisi del sangue</b><span>Risultati arrivati</span></div>
+                <div class="row"><i style="--c:#8BE9FF"></i><b>Passi di oggi</b><span>8.420 · dall'iPhone</span></div>
+              </div></div>
+              <div class="pv"><div class="list list--check">
+                <div class="row is-done"><i></i><b>Invio last minute</b><span>Lunedì · 8:00</span></div>
+                <div class="row"><i></i><b>Chiamare il cliente</b><span>Oggi · 15:00</span></div>
+                <div class="row"><i></i><b>Auguri ad Alessia</b><span>12 novembre</span></div>
+              </div></div>
+              <div class="pv"><div class="day">
+                <div class="slot"><span>09:00</span><b style="--c:#4FC3FF">Riunione di team</b></div>
+                <div class="slot"><span>12:00</span><b style="--c:#8A7DFF">Appuntamento</b></div>
+                <div class="slot"><span>17:30</span><b style="--c:#7CF2C2">Palestra</b></div>
+              </div></div>
+              <div class="pv"><div class="list">
+                <div class="row"><i style="--c:#B69CFF"></i><b>Faissal · SGPA</b><span>Bozza pronta in francese</span></div>
+                <div class="row"><i style="--c:#8BE9FF"></i><b>22 email lette</b><span>Nessuna urgente</span></div>
+                <div class="row"><i style="--c:#FFC56B"></i><b>Netflix</b><span>Nuovo accesso: era Sara</span></div>
+              </div></div>
+              <div class="pv"><div class="cmds"><span>☀️ Buongiorno</span><span>🌙 Fine giornata</span><span>📁 Riordina Download</span><span>🖥️ Schermo</span><span>🛰️ /server</span><span>💡 Idea</span></div></div>
+            </div>
           </div>
         </div>
       </div>
@@ -259,8 +290,8 @@
       <canvas id="graph" class="brain__graph" data-speed="0.25"></canvas>
       <div class="wrap brain__grid">
         <div class="brain__copy reveal">
-          <p class="kicker">04 · Cervello</p>
-          <h2>Ricorda tutto.<br><span class="grad">E i ricordi restano tuoi.</span></h2>
+          <p class="kicker">05 · Cervello</p>
+          <h2 data-split>Ricorda tutto.<br><span class="grad">E i ricordi restano tuoi.</span></h2>
           <p class="muted">Persone, progetti, decisioni, preferenze: Irbas li scrive in note collegate tra loro, in un vault di Obsidian sul tuo Mac. Le puoi leggere, correggere e portare dove vuoi. Niente scatole nere.</p>
         </div>
         <div class="brain__stats">
@@ -274,36 +305,36 @@
     <!-- POTENZIALITÀ -->
     <section class="powers wrap" id="potenzialita">
       <div class="section-head reveal">
-        <p class="kicker">05 · Potenzialità</p>
-        <h2>Cosa può fare <span class="grad">per te.</span></h2>
+        <p class="kicker">06 · Potenzialità</p>
+        <h2 data-split>Cosa può fare <span class="grad">per te.</span></h2>
       </div>
       <div class="bento">
-        <article class="tile tile--wide reveal" data-tilt>
+        <article class="tile tile--wide" data-tilt>
           <h3>Agisce davvero sul Mac</h3>
           <p>Mail, Calendario, Promemoria, Note, Finder, Safari, Comandi Rapidi, WhatsApp. Non ti spiega come fare: lo fa.</p>
           <div class="apps"><span>Mail</span><span>Calendario</span><span>Promemoria</span><span>Note</span><span>Finder</span><span>Safari</span><span>Comandi</span></div>
         </article>
-        <article class="tile reveal" data-tilt>
+        <article class="tile" data-tilt>
           <h3>Ti chiede l'ok</h3>
           <p>Inviare, pubblicare, cancellare, spendere: niente parte senza la tua approvazione.</p>
         </article>
-        <article class="tile reveal" data-tilt>
+        <article class="tile" data-tilt>
           <h3>Voce sul tuo Mac</h3>
           <p>Voci naturali che girano in locale. Dettatura con il riconoscimento di Apple.</p>
         </article>
-        <article class="tile reveal" data-tilt>
+        <article class="tile" data-tilt>
           <h3>Anche su Telegram</h3>
           <p>Gli scrivi o gli mandi un vocale dal telefono, e lui lavora sul Mac.</p>
         </article>
-        <article class="tile reveal" data-tilt>
+        <article class="tile" data-tilt>
           <h3>Programma il futuro</h3>
           <p>«Ogni lunedì alle 9…»: attività ricorrenti che partono da sole.</p>
         </article>
-        <article class="tile reveal" data-tilt>
+        <article class="tile" data-tilt>
           <h3>Fogli con l'AI</h3>
           <p>Apri un Excel e chiedi: Irbas legge le formule, le scrive e ti spiega i numeri.</p>
         </article>
-        <article class="tile tile--wide reveal" data-tilt>
+        <article class="tile tile--wide" data-tilt>
           <h3>Uno sviluppatore in squadra</h3>
           <p>Dev scrive codice, fa i commit, controlla Railway e GitHub, verifica i siti e prepara le correzioni su un branch, sempre con il tuo ok prima del deploy.</p>
           <pre class="code"><span class="c-mute">$</span> irbas «fai il giro di controllo»
@@ -318,22 +349,22 @@
     <section class="business" id="aziende">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="kicker">06 · Per le aziende</p>
-          <h2>Lavoriamo con te, <span class="grad">come un'azienda.</span></h2>
+          <p class="kicker">07 · Per le aziende</p>
+          <h2 data-split>Lavoriamo con te, <span class="grad">come un'azienda.</span></h2>
           <p class="muted">Portiamo Irbas nel tuo team: lo installiamo, lo colleghiamo ai tuoi strumenti e lo adattiamo al modo in cui lavorate.</p>
         </div>
         <div class="plans">
-          <article class="plan reveal">
+          <article class="plan">
             <p class="plan__name">Personale</p>
             <h3>Per chi lavora da solo</h3>
             <ul><li>Installazione sul tuo Mac</li><li>Voce, agenti e cervello</li><li>Telegram e attività programmate</li></ul>
           </article>
-          <article class="plan plan--glow reveal">
+          <article class="plan plan--glow">
             <p class="plan__name">Team</p>
             <h3>Per studi e piccole aziende</h3>
             <ul><li>Agenti su misura per i vostri reparti</li><li>Collegamento a mail, calendari e gestionali</li><li>Formazione del team</li></ul>
           </article>
-          <article class="plan reveal">
+          <article class="plan">
             <p class="plan__name">Su misura</p>
             <h3>Per progetti speciali</h3>
             <ul><li>Integrazioni personalizzate</li><li>Assistenza dedicata</li><li>Sviluppo di nuove funzioni</li></ul>
@@ -346,8 +377,12 @@
     <section class="cta" id="contatti">
       <div class="cta__orb" data-speed="0.2"></div>
       <div class="wrap cta__inner reveal">
-        <svg class="logo logo--big" viewBox="0 0 100 100" aria-hidden="true"><use href="#irbas-logo"/></svg>
-        <h2>Pronto a conoscere Irbas?</h2>
+        <svg class="logo logo--big" viewBox="0 0 100 100" aria-hidden="true" data-cta-logo>
+          <path class="arc arc--r" d="M70.75 12.5 A42.86 42.86 0 0 1 70.75 87.5" fill="none" stroke="#4CEDFB" stroke-width="4.9"/>
+          <path class="arc arc--l" d="M29.25 87.5 A42.86 42.86 0 0 1 29.25 12.5" fill="none" stroke="#4CEDFB" stroke-width="4.9"/>
+          <rect class="bar" x="42.35" y="1" width="15.3" height="98" rx="7.65" fill="url(#pillGrad)"/>
+        </svg>
+        <h2 data-split>Pronto a conoscere Irbas?</h2>
         <p class="muted">Ti mostriamo come lavora sul tuo Mac, con i tuoi strumenti.</p>
         <a href="mailto:sabrizaltni@gmail.com?subject=Demo%20di%20Irbas" class="btn btn--primary btn--lg">Richiedi una demo</a>
       </div>
