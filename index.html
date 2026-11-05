@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Irbas · L'assistente che vive sul tuo Mac</title>
+  <meta name="description" content="Irbas è l'assistente personale per Mac: lo chiami con la voce, agisce sulle tue app, lavora con una squadra di agenti e ricorda tutto in un cervello che è tuo.">
+  <meta name="theme-color" content="#020307">
+  <link rel="icon" href="assets/img/irbas-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Sfondo: stelle e aloni che si muovono a velocità diverse -->
+  <div class="sky" aria-hidden="true">
+    <canvas id="stars"></canvas>
+    <div class="glow glow--cyan" data-speed="-0.15"></div>
+    <div class="glow glow--violet" data-speed="-0.3"></div>
+  </div>
+
+  <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+
+  <!-- Navigazione -->
+  <header class="nav" id="nav">
+    <div class="wrap nav__inner">
+      <a href="#top" class="brand" aria-label="Irbas">
+        <svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><use href="#irbas-logo"/></svg>
+        <span>IRBAS</span>
+      </a>
+      <nav class="nav__links">
+        <a href="#voce">Voce</a>
+        <a href="#squadra">Squadra</a>
+        <a href="#app">L'app</a>
+        <a href="#cervello">Cervello</a>
+        <a href="#aziende">Aziende</a>
+      </nav>
+      <a href="#contatti" class="btn btn--glass btn--sm">Richiedi una demo</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__orb" data-hero-orb>
+        <canvas id="orb"></canvas>
+      </div>
+      <div class="wrap hero__content">
+        <p class="kicker reveal">Assistente personale per Mac</p>
+        <h1 class="hero__title">
+          <span class="line"><span class="word">Il tuo Mac,</span></span>
+          <span class="line"><span class="word grad">finalmente vivo.</span></span>
+        </h1>
+        <p class="hero__lead reveal">Irbas ascolta, capisce e agisce sulle tue app. Lavora con una squadra di agenti e ricorda tutto in un cervello che resta sul tuo computer.</p>
+        <div class="hero__actions reveal">
+          <a href="#contatti" class="btn btn--primary">Richiedi una demo</a>
+          <a href="#voce" class="btn btn--glass">Scopri come funziona</a>
+        </div>
+        <p class="hero__hint reveal">Premi <kbd>⌥</kbd> <kbd>Spazio</kbd> e parla.</p>
+      </div>
+      <div class="scroll-cue" aria-hidden="true"><span></span></div>
+    </section>
+
+    <!-- Nastro di funzioni -->
+    <div class="ribbon" aria-hidden="true">
+      <div class="ribbon__track" data-ribbon>
+        <span>Voce</span><i></i><span>Agenti</span><i></i><span>Cervello</span><i></i><span>Mail</span><i></i><span>Calendario</span><i></i><span>Promemoria</span><i></i><span>Prisma</span><i></i><span>Telegram</span><i></i><span>Fogli</span><i></i><span>Progetti</span><i></i><span>Codice</span><i></i>
+        <span>Voce</span><i></i><span>Agenti</span><i></i><span>Cervello</span><i></i><span>Mail</span><i></i><span>Calendario</span><i></i><span>Promemoria</span><i></i><span>Prisma</span><i></i><span>Telegram</span><i></i><span>Fogli</span><i></i><span>Progetti</span><i></i><span>Codice</span><i></i>
+      </div>
+    </div>
+
+    <!-- MANIFESTO -->
+    <section class="manifesto wrap">
+      <p class="manifesto__text" data-words>Non è un'altra chat. Irbas vive sul tuo Mac, conosce le tue app, i tuoi progetti e le tue persone. Gli dici cosa ti serve e lui lo fa: scrive, cerca, organizza, programma, e ti chiede l'ok prima di ogni cosa importante.</p>
+    </section>
+
+    <!-- VOCE: scena fissa con frasi che scorrono -->
+    <section class="voice" id="voce" data-scene>
+      <div class="voice__sticky">
+        <div class="wrap voice__grid">
+          <div class="voice__copy">
+            <p class="kicker">01 · Voce</p>
+            <h2>Parli. Lui agisce.</h2>
+            <p class="muted">Una pillola luminosa compare sopra tutto quello che stai facendo. Dici cosa ti serve, Irbas capisce, usa le app giuste e ti risponde a voce, con una voce naturale che gira tutta sul tuo Mac.</p>
+            <ul class="steps" data-steps>
+              <li class="is-on"><span>1</span>Lo chiami con <kbd>⌥</kbd> <kbd>Spazio</kbd></li>
+              <li><span>2</span>Capisce e sceglie gli strumenti</li>
+              <li><span>3</span>Agisce, e ti chiede l'ok se serve</li>
+            </ul>
+          </div>
+          <div class="voice__stage">
+            <div class="pill" data-pill>
+              <span class="pill__dot"></span>
+              <div class="pill__wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <span class="pill__label" data-pill-label>In ascolto…</span>
+            </div>
+            <div class="phrases">
+              <div class="phrase" data-phrase>
+                <p class="phrase__say">«Cosa ho da fare oggi?»</p>
+                <p class="phrase__do"><b>Calendario</b> e <b>Promemoria</b> letti · meteo di Comiso · <em>«Hai due riunioni, la prima alle 10.»</em></p>
+              </div>
+              <div class="phrase" data-phrase>
+                <p class="phrase__say">«Rispondi a Marco che ci vediamo giovedì.»</p>
+                <p class="phrase__do"><b>Mail</b> · bozza pronta · <em>«Te l'ho preparata. La mando?»</em></p>
+              </div>
+              <div class="phrase" data-phrase>
+                <p class="phrase__say">«Controlla se il sito del cliente è online.»</p>
+                <p class="phrase__do"><b>Dev</b> · deploy, log e tempi di risposta · <em>«Tutto ok, risponde in 0,2 secondi.»</em></p>
+              </div>
+              <div class="phrase" data-phrase>
+                <p class="phrase__say">«Ogni lunedì alle 9 fammi il riepilogo.»</p>
+                <p class="phrase__do"><b>Attività programmata</b> · ricorrente · <em>«Fatto. Ti scrivo anche su Telegram.»</em></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SQUADRA: scorrimento orizzontale -->
+    <section class="team" id="squadra" data-scene>
+      <div class="team__sticky">
+        <div class="wrap team__head">
+          <p class="kicker">02 · Squadra</p>
+          <h2>Una squadra di agenti.<br><span class="grad">Ognuno col suo mestiere.</span></h2>
+          <p class="muted">Si chiamano con @nome, si passano il lavoro tra loro e si fermano quando serve il tuo ok. Come un piccolo ufficio, sempre aperto.</p>
+        </div>
+        <div class="team__track" data-track>
+          <article class="agent" style="--c:#8A7DFF">
+            <div class="agent__icon"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2 2.2.8-2.2.8L19 21l-.8-2.2-2.2-.8 2.2-.8z"/></svg></div>
+            <h3>Irbas</h3><p>L'assistente generale. Fa un po' di tutto e smista il lavoro.</p><span class="agent__tag">@irbas</span>
+          </article>
+          <article class="agent" style="--c:#8A7DFF">
+            <div class="agent__icon"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+            <h3>Direttore</h3><p>Organizza la giornata, assegna i compiti e tiene d'occhio le priorità.</p><span class="agent__tag">@direttore</span>
+          </article>
+          <article class="agent" style="--c:#4FC3FF">
+            <div class="agent__icon"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></div>
+            <h3>Dev</h3><p>Scrive codice, lo prova, usa git, controlla server e deploy.</p><span class="agent__tag">@dev</span>
+          </article>
+          <article class="agent" style="--c:#B69CFF">
+            <div class="agent__icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+            <h3>Segretario</h3><p>Mail, Calendario e Promemoria: legge, riassume, prepara le bozze.</p><span class="agent__tag">@segretario</span>
+          </article>
+          <article class="agent" style="--c:#8BE9FF">
+            <div class="agent__icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></div>
+            <h3>Ricercatore</h3><p>Cerca sul web, confronta le fonti e riassume con i link.</p><span class="agent__tag">@ricercatore</span>
+          </article>
+          <article class="agent" style="--c:#4FE0D0">
+            <div class="agent__icon"><svg viewBox="0 0 24 24"><path d="M14 4l6 6-9 9H5v-6z"/><path d="M12 6l6 6"/></svg></div>
+            <h3>Creativo</h3><p>Trasforma il tuo lavoro in post per LinkedIn e X, col tuo tono.</p><span class="agent__tag">@creativo</span>
+          </article>
+          <article class="agent" style="--c:#6E8BFF">
+            <div class="agent__icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="5" rx="1"/><path d="M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9M10 13h4"/></svg></div>
+            <h3>Archivista</h3><p>Tiene in ordine il cervello e i file: unisce, collega, riordina.</p><span class="agent__tag">@archivista</span>
+          </article>
+          <article class="agent" style="--c:#7CF2C2">
+            <div class="agent__icon"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div>
+            <h3>Tecnico</h3><p>Sorveglia memoria e consumi del Mac e ti avvisa prima dei problemi.</p><span class="agent__tag">@tecnico</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- L'APP: finestra che cambia sezione con lo scroll -->
+    <section class="showcase" id="app" data-scene>
+      <div class="showcase__sticky">
+        <div class="wrap showcase__head">
+          <p class="kicker">03 · L'app</p>
+          <h2>Tutto il tuo lavoro, <span class="grad">in un'unica finestra.</span></h2>
+        </div>
+        <div class="wrap">
+          <div class="window" data-window>
+            <div class="window__bar"><i></i><i></i><i></i><span>Irbas</span></div>
+            <div class="window__body">
+              <aside class="rail">
+                <div class="rail__item is-on" data-tab="0"><b>Irbas</b><small>Parla con Irbas</small></div>
+                <div class="rail__item" data-tab="1"><b>Ufficio</b><small>La squadra di agenti</small></div>
+                <div class="rail__item" data-tab="2"><b>Chat</b><small>Agenti, gruppi e chiamate</small></div>
+                <div class="rail__item" data-tab="3"><b>Cervello</b><small>Ricordi e collegamenti</small></div>
+                <div class="rail__item" data-tab="4"><b>Prisma</b><small>Il browser con l'AI</small></div>
+                <div class="rail__item"><b>Progetti</b><small>Lavoro, studio, cartelle</small></div>
+                <div class="rail__item"><b>Fogli</b><small>Excel, con l'AI</small></div>
+                <div class="rail__item"><b>Calendario</b><small>Impegni e giornate</small></div>
+                <div class="rail__item"><b>Email</b><small>Posta in arrivo</small></div>
+              </aside>
+              <div class="screens">
+                <!-- Home -->
+                <div class="screen is-on" data-screen="0">
+                  <div class="home">
+                    <canvas class="mini-orb" data-mini-orb></canvas>
+                    <p class="home__hello">Buongiorno, Sabri.</p>
+                    <div class="home__cards">
+                      <div class="card"><small>Oggi</small><b>2 impegni</b><span>Riunione alle 10:00</span></div>
+                      <div class="card"><small>Da approvare</small><b>1 richiesta</b><span>Deploy del sito</span></div>
+                      <div class="card"><small>Squadra</small><b>3 al lavoro</b><span>Dev, Segretario, Tecnico</span></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Ufficio -->
+                <div class="screen" data-screen="1">
+                  <div class="office">
+                    <div class="desk" style="--c:#4FC3FF"><span class="desk__av">D</span><b>Dev</b><small>Controlla i log di Railway</small><i class="desk__bar"></i></div>
+                    <div class="desk" style="--c:#B69CFF"><span class="desk__av">S</span><b>Segretario</b><small>Riassume 22 email</small><i class="desk__bar"></i></div>
+                    <div class="desk" style="--c:#8BE9FF"><span class="desk__av">R</span><b>Ricercatore</b><small>Confronta 5 fonti</small><i class="desk__bar"></i></div>
+                    <div class="desk is-idle" style="--c:#4FE0D0"><span class="desk__av">C</span><b>Creativo</b><small>In pausa</small></div>
+                    <div class="board">
+                      <small>Bacheca</small>
+                      <p><b>09:40 · Dev</b> Sito pubblicato, tutto verificato.</p>
+                      <p><b>09:12 · Segretario</b> Bozza pronta per il cliente.</p>
+                      <p class="approve">APPROVA · Pubblicare il deploy? <span>Ok</span></p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Chat -->
+                <div class="screen" data-screen="2">
+                  <div class="chat">
+                    <div class="msg msg--in"><b>Direttore</b>Piano di oggi: prima il cliente, poi il sito nuovo.</div>
+                    <div class="msg msg--out">Ok, parti dal cliente.</div>
+                    <div class="msg msg--in"><b>Dev</b>Fatto: test passati e anteprima su localhost.</div>
+                    <div class="msg msg--in msg--ask"><b>Dev</b>Serve il tuo ok per pubblicare. <span class="chip">Approva</span><span class="chip chip--ghost">Rifiuta</span></div>
+                  </div>
+                </div>
+                <!-- Cervello -->
+                <div class="screen" data-screen="3">
+                  <canvas class="graph" data-mini-graph></canvas>
+                  <div class="note-chip">Io.md · 42 collegamenti</div>
+                </div>
+                <!-- Prisma -->
+                <div class="screen" data-screen="4">
+                  <div class="prisma">
+                    <div class="prisma__bar"><span class="prisma__logo">PRISMA</span><span class="prisma__url">technoparts.it</span></div>
+                    <div class="prisma__page">
+                      <div class="sk sk--title"></div><div class="sk"></div><div class="sk sk--short"></div>
+                      <div class="sk-grid"><i></i><i></i><i></i></div>
+                    </div>
+                    <div class="prisma__ai"><b>Irbas</b> Il sito risponde bene. Ho trovato 2 immagini senza testo alternativo: le sistemo?</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="screen-captions">
+            <p class="is-on">La home: la sfera di Irbas, la tua giornata, le cose da approvare.</p>
+            <p>L'Ufficio: vedi chi sta lavorando, la bacheca e cosa aspetta il tuo ok.</p>
+            <p>Le chat: parli con un agente o con tutta la squadra, come su WhatsApp.</p>
+            <p>Il Cervello: le tue note collegate, in un grafo che cresce con te.</p>
+            <p>Prisma: il browser con l'AI dentro, che legge le pagine con te.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERVELLO -->
+    <section class="brain" id="cervello">
+      <canvas id="graph" class="brain__graph" data-speed="0.25"></canvas>
+      <div class="wrap brain__grid">
+        <div class="brain__copy reveal">
+          <p class="kicker">04 · Cervello</p>
+          <h2>Ricorda tutto.<br><span class="grad">E i ricordi restano tuoi.</span></h2>
+          <p class="muted">Persone, progetti, decisioni, preferenze: Irbas li scrive in note collegate tra loro, in un vault di Obsidian sul tuo Mac. Le puoi leggere, correggere e portare dove vuoi. Niente scatole nere.</p>
+        </div>
+        <div class="brain__stats">
+          <div class="stat reveal"><b data-count="12">0</b><span>micro app in una finestra</span></div>
+          <div class="stat reveal"><b data-count="8">0</b><span>agenti specializzati</span></div>
+          <div class="stat reveal"><b data-count="100" data-suffix="%">0</b><span>dei ricordi sul tuo Mac</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POTENZIALITÀ -->
+    <section class="powers wrap" id="potenzialita">
+      <div class="section-head reveal">
+        <p class="kicker">05 · Potenzialità</p>
+        <h2>Cosa può fare <span class="grad">per te.</span></h2>
+      </div>
+      <div class="bento">
+        <article class="tile tile--wide reveal" data-tilt>
+          <h3>Agisce davvero sul Mac</h3>
+          <p>Mail, Calendario, Promemoria, Note, Finder, Safari, Comandi Rapidi, WhatsApp. Non ti spiega come fare: lo fa.</p>
+          <div class="apps"><span>Mail</span><span>Calendario</span><span>Promemoria</span><span>Note</span><span>Finder</span><span>Safari</span><span>Comandi</span></div>
+        </article>
+        <article class="tile reveal" data-tilt>
+          <h3>Ti chiede l'ok</h3>
+          <p>Inviare, pubblicare, cancellare, spendere: niente parte senza la tua approvazione.</p>
+        </article>
+        <article class="tile reveal" data-tilt>
+          <h3>Voce sul tuo Mac</h3>
+          <p>Voci naturali che girano in locale. Dettatura con il riconoscimento di Apple.</p>
+        </article>
+        <article class="tile reveal" data-tilt>
+          <h3>Anche su Telegram</h3>
+          <p>Gli scrivi o gli mandi un vocale dal telefono, e lui lavora sul Mac.</p>
+        </article>
+        <article class="tile reveal" data-tilt>
+          <h3>Programma il futuro</h3>
+          <p>«Ogni lunedì alle 9…»: attività ricorrenti che partono da sole.</p>
+        </article>
+        <article class="tile reveal" data-tilt>
+          <h3>Fogli con l'AI</h3>
+          <p>Apri un Excel e chiedi: Irbas legge le formule, le scrive e ti spiega i numeri.</p>
+        </article>
+        <article class="tile tile--wide reveal" data-tilt>
+          <h3>Uno sviluppatore in squadra</h3>
+          <p>Dev scrive codice, fa i commit, controlla Railway e GitHub, verifica i siti e prepara le correzioni su un branch, sempre con il tuo ok prima del deploy.</p>
+          <pre class="code"><span class="c-mute">$</span> irbas «fai il giro di controllo»
+<span class="c-ok">✓</span> Railway   SUCCESS · 182 richieste · 30 ms
+<span class="c-ok">✓</span> GitHub    nessuna PR aperta
+<span class="c-ok">✓</span> Siti      11/11 online</pre>
+        </article>
+      </div>
+    </section>
+
+    <!-- AZIENDE -->
+    <section class="business" id="aziende">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">06 · Per le aziende</p>
+          <h2>Lavoriamo con te, <span class="grad">come un'azienda.</span></h2>
+          <p class="muted">Portiamo Irbas nel tuo team: lo installiamo, lo colleghiamo ai tuoi strumenti e lo adattiamo al modo in cui lavorate.</p>
+        </div>
+        <div class="plans">
+          <article class="plan reveal">
+            <p class="plan__name">Personale</p>
+            <h3>Per chi lavora da solo</h3>
+            <ul><li>Installazione sul tuo Mac</li><li>Voce, agenti e cervello</li><li>Telegram e attività programmate</li></ul>
+          </article>
+          <article class="plan plan--glow reveal">
+            <p class="plan__name">Team</p>
+            <h3>Per studi e piccole aziende</h3>
+            <ul><li>Agenti su misura per i vostri reparti</li><li>Collegamento a mail, calendari e gestionali</li><li>Formazione del team</li></ul>
+          </article>
+          <article class="plan reveal">
+            <p class="plan__name">Su misura</p>
+            <h3>Per progetti speciali</h3>
+            <ul><li>Integrazioni personalizzate</li><li>Assistenza dedicata</li><li>Sviluppo di nuove funzioni</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contatti">
+      <div class="cta__orb" data-speed="0.2"></div>
+      <div class="wrap cta__inner reveal">
+        <svg class="logo logo--big" viewBox="0 0 100 100" aria-hidden="true"><use href="#irbas-logo"/></svg>
+        <h2>Pronto a conoscere Irbas?</h2>
+        <p class="muted">Ti mostriamo come lavora sul tuo Mac, con i tuoi strumenti.</p>
+        <a href="mailto:sabrizaltni@gmail.com?subject=Demo%20di%20Irbas" class="btn btn--primary btn--lg">Richiedi una demo</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <a href="#top" class="brand"><svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><use href="#irbas-logo"/></svg><span>IRBAS</span></a>
+      <p>© 2026 Irbas · Creato da Sabri Zaltni</p>
+    </div>
+  </footer>
+
+  <!-- Il logo di Irbas: una barra luminosa tra due archi (stesse proporzioni dell'app) -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <linearGradient id="pillGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#70F1FD"/>
+      </linearGradient>
+      <symbol id="irbas-logo" viewBox="0 0 100 100">
+        <path d="M70.75 12.5 A42.86 42.86 0 0 1 70.75 87.5" fill="none" stroke="#4CEDFB" stroke-width="4.9"/>
+        <path d="M29.25 87.5 A42.86 42.86 0 0 1 29.25 12.5" fill="none" stroke="#4CEDFB" stroke-width="4.9"/>
+        <rect x="42.35" y="1" width="15.3" height="98" rx="7.65" fill="url(#pillGrad)"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="assets/js/orb.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
